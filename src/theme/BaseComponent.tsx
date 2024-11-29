@@ -1,6 +1,7 @@
 'use client'
+
 import styled from "styled-components";
-import { StyleSheet } from '@src/theme/StyleSheet'
+import { StyleSheet } from "./StyleSheet";
 import { parseStyleSheet } from '@displaykit/responsive_styles'
 
 interface StyledBaseComponentProps {
@@ -8,15 +9,15 @@ interface StyledBaseComponentProps {
 }
 
 const StyledBaseComponent = styled.div<StyledBaseComponentProps>`
+  display: flex;
+  flex-direction: column;
+  align-content:flex-start;
+  flex-shrink: 0;
   ${({ $styleSheet }) => parseStyleSheet($styleSheet)}
 `
 
-export const BaseComponent = ({ styleSheet, ...props }) => {
+export const BaseComponent = ({ styleSheet = {}, ...props }) => {
   return (
     <StyledBaseComponent $styleSheet={styleSheet} {...props} />
   )
-}
-
-BaseComponent.defaultProps = {
-  $styleSheet: {},
 }
