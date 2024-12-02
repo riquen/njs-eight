@@ -1,5 +1,6 @@
 import Box from "@src/components/Box/Box";
 import Icon from "@src/components/Icon/Icon";
+import Image from "@src/components/Image/Image";
 import Text from "@src/components/Text/Text";
 
 interface FeedProps {
@@ -9,6 +10,7 @@ interface FeedProps {
 export default function Feed({ children }: FeedProps) {
   return (
     <Box>
+      <Image src="https://www.github.com/riquen.png" alt="Imagem de perfil do Henrique Nunes" />
       <Icon name="youtube" />
       <Icon name="twitter" />
       <Icon name="instagram" />
