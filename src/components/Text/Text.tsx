@@ -4,21 +4,24 @@ import { ThemeTypographyVariants } from "@src/theme/theme";
 import { StyleSheet } from "@src/theme/StyleSheet";
 import { BaseComponent } from "@src/theme/BaseComponent";
 import { useTheme } from "@src/theme/ThemeProvider";
+import { forwardRef } from "react";
 
 interface TextProps {
   children?: React.ReactNode;
   variant?: ThemeTypographyVariants
-  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'span' | 'li'
+  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'span' | 'li' | string
   styleSheet?: StyleSheet
+  ref: any
 }
 
-export default function Text({ children, variant = 'heading1', tag = 'p', styleSheet, ...props }: TextProps) {
+const Text = forwardRef(({ children, variant = 'body2', tag = 'p', styleSheet, ...props }: TextProps, ref) => {
   const theme = useTheme()
   const textVariant = theme.typography.variants[variant]
 
   return (
     <BaseComponent
-      $tag={tag}
+      ref={ref}
+      as={tag}
       styleSheet={{
         fontFamily: theme.typography.fontFamily,
         ...textVariant,
@@ -29,4 +32,6 @@ export default function Text({ children, variant = 'heading1', tag = 'p', styleS
       {children}
     </BaseComponent>
   )
-}
+})
+
+export default Text
