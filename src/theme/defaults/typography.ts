@@ -9,123 +9,143 @@ export const typography = {
         xs: '1.5',
       },
       fontSize: {
-        xs: '3rem',
-        md: '3.75rem',
+        xs: '48px',
+        md: '60px',
       },
     },
     heading1: {
       fontWeight: {
         xs: '700',
+        md: '700',
       },
       lineHeight: {
         xs: '1.5',
+        md: '1.5',
       },
       fontSize: {
-        xs: '2.25rem',
-        md: '3rem',
+        xs: '36px',
+        md: '48px',
       },
     },
     heading2: {
       fontWeight: {
         xs: '700',
+        md: '700',
       },
       lineHeight: {
         xs: '1.5',
+        md: '1.5',
       },
       fontSize: {
-        xs: '1.5rem',
-        md: '2.25rem',
+        xs: '24px',
+        md: '36px',
       },
     },
     heading3: {
       fontWeight: {
         xs: '700',
+        md: '700',
       },
       lineHeight: {
         xs: '1.5',
+        md: '1.5',
       },
       fontSize: {
-        xs: '1.25rem',
-        md: '1.875rem',
+        xs: '20px',
+        md: '30px',
       },
     },
     heading4: {
       fontWeight: {
         xs: '700',
+        md: '700',
       },
       lineHeight: {
         xs: '1.5',
+        md: '1.5',
       },
       fontSize: {
-        xs: '1rem',
-        md: '1.25rem',
+        xs: '16px',
+        md: '20px',
       },
     },
     heading5: {
       fontWeight: {
         xs: '700',
+        md: '700',
       },
       lineHeight: {
         xs: '1.5',
+        md: '1.5',
       },
       fontSize: {
-        xs: '0.875rem',
-        md: '1rem',
+        xs: '14px',
+        md: '16px',
       },
     },
     body1: {
       fontWeight: {
         xs: '400',
+        md: '400',
       },
       lineHeight: {
         xs: '1.5',
+        md: '1.5',
       },
       fontSize: {
-        xs: '1.125rem',
+        xs: '18px',
       },
     },
     body2: {
       fontWeight: {
         xs: '400',
+        md: '400',
       },
       lineHeight: {
         xs: '1.5',
+        md: '1.5',
       },
       fontSize: {
-        xs: '1rem',
+        xs: '16px',
       },
     },
     body3: {
       fontWeight: {
         xs: '400',
+        md: '400',
       },
       lineHeight: {
         xs: '1.5',
+        md: '1.5',
       },
       fontSize: {
-        xs: '0.875rem',
+        xs: '14px',
       },
     },
     body4: {
       fontWeight: {
         xs: '400',
+        md: '400',
       },
       lineHeight: {
         xs: '1.5',
+        md: '1.5',
       },
       fontSize: {
-        xs: '0.75rem',
+        xs: '12px',
       },
     },
     body5: {
       fontWeight: {
         xs: '400',
+        md: '400',
       },
       lineHeight: {
         xs: '1.5',
+        md: '1.5',
       },
       fontSize: {
-        xs: '0.5rem',
+        xs: '8px',
       },
     },
   }

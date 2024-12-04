@@ -2,23 +2,23 @@ export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg'
 
 export const buttonSize = {
   xs: {
-    borderRadius: '0.25rem',
-    paddingVertical: '0.375rem',
-    paddingHorizontal: '0.625rem',
+    borderRadius: '4px',
+    paddingVertical: '6px',
+    paddingHorizontal: '10px',
   },
   sm: {
-    borderRadius: '0.375rem',
-    paddingVertical: '0.5rem',
-    paddingHorizontal: '0.75rem',
+    borderRadius: '6px',
+    paddingVertical: '8px',
+    paddingHorizontal: '12px',
   },
   md: {
-    borderRadius: '0.375rem',
-    paddingVertical: '0.5rem',
-    paddingHorizontal: '1rem',
+    borderRadius: '6px',
+    paddingVertical: '8px',
+    paddingHorizontal: '16px',
   },
   lg: {
-    borderRadius: '0.375rem',
-    paddingVertical: '1rem',
+    borderRadius: '6px',
+    paddingVertical: '16px',
     paddingHorizontal: '24px',
   },
 }

@@ -14,8 +14,14 @@ export default function Image({ src, alt, styleSheet, ...props }: ImageProps) {
       src={src}
       alt={alt}
       styleSheet={{
-        width: '128px',
-        height: '128px',
+        width: {
+          xs: '100px',
+          md: '128px',
+        },
+        height: {
+          xs: '100px',
+          md: '128px',
+        },
         borderRadius: '100%',
         ...styleSheet
       }}

@@ -1,51 +1,70 @@
 import Box from "@src/components/Box/Box";
 import Button from "@src/components/Button/Button";
-import Icon from "@src/components/Icon/Icon";
 import Image from "@src/components/Image/Image";
-import Link from "@src/components/Link/Link";
 import Text from "@src/components/Text/Text";
+import { useTheme } from "@src/theme/ThemeProvider";
 
 interface FeedProps {
   children: React.ReactNode;
 }
 
 export default function Feed({ children }: FeedProps) {
+  const theme = useTheme()
+
   return (
-    <Box>
-      <Text>
-        Feed
-      </Text>
+    <Box
+      styleSheet={{
+        backgroundColor: theme.colors.neutral.x050,
+        marginTop: '-228px',
+        width: '100%',
+        maxWidth: '683px',
+        borderRadius: '8px',
+        paddingHorizontal: '32px',
+        paddingVertical: '40px',
+      }}
+    >
       {children}
     </Box>
   )
 }
 
 Feed.Header = function FeedHeader() {
+  const theme = useTheme()
+
   return (
-    <Box>
-      <Button colorVariant="positive" variant="contained" size='xs'>
-        Success
-      </Button>
-      <Button colorVariant="warning" variant="ghost" size="sm">
-        Alert
-      </Button>
-      <Button colorVariant="negative" variant="outlined">
-        Error
-      </Button>
-      <Button colorVariant="primary" variant="contained" size="lg">
-        Large
-      </Button>
-      <Button.Base>
+    <Box
+      styleSheet={{
+        borderBottom: `1px solid ${theme.colors.neutral.x200}`,
+        marginBottom: '24px',
+        paddingBottom: '24px',
+      }}
+    >
+      <Box
+        styleSheet={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          gap: '16px',
+          marginBottom: '16px',
+        }}
+      >
         <Image src="https://www.github.com/riquen.png" alt="Imagem de perfil do Henrique Nunes" />
-      </Button.Base>
-      <Icon name="youtube" />
-      <Icon name="twitter" />
-      <Icon name="instagram" />
-      <Link href="https://www.github.com/riquen">
-        <Icon name="github" />
-      </Link>
-      <Text>
-        Feed Header
+        <Box
+          styleSheet={{
+            justifyContent: 'space-between',
+          }}
+        >
+          <Box styleSheet={{ flex: 1, justifyContent: 'space-between', display: { xs: 'none', md: 'flex', }, }}>
+            <Button fullWidth size="lg">Newsletter</Button>
+            <Button fullWidth colorVariant="neutral" size="lg">Buy me a coffee</Button>
+          </Box>
+          <Box styleSheet={{ flex: 1, justifyContent: 'space-between', display: { xs: 'flex', md: 'none', }, }}>
+            <Button fullWidth size="xs">Newsletter</Button>
+            <Button fullWidth colorVariant="neutral" size="xs">Buy me a coffee</Button>
+          </Box>
+        </Box>
+      </Box>
+      <Text tag="h1" variant="heading4">
+        Henrique Nunes
       </Text>
     </Box>
   )

@@ -18,6 +18,8 @@ export default function Button({ children, fullWidth = false, colorVariant = 'pr
     <ButtonBase
       styleSheet={{
         alignSelf: 'flex-start',
+        alignItems: 'center',
+        justifyContent: 'center',
         ...colorVariantBy(theme, colorVariant, variant),
         ...buttonSize[size],
         ...(fullWidth && { alignSelf: 'initial' }),

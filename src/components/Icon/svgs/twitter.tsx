@@ -5,7 +5,7 @@ export default () => (
     </g>
     <defs>
       <clipPath id="clip0_5_103">
-        <rect width="24" height="24" fill="white" />
+        <rect width="24" height="24" />
       </clipPath>
     </defs>
   </>
