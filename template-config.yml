@@ -1,0 +1,11 @@
+site:
+  title: "Henrique Nunes - Timeline"
+  description: "Bem vindos a minha timeline"
+personal:
+  name: "Henrique Nunes"
+  avatar: "https://www.github.com/riquen.png"
+  socialNetworks:
+    github: "https://www.github.com/riquen"
+    instagram: "https://www.instagram.com/riquen"
+    linkedin: "https://www.linkedin.com/in/henrique-arantes-nunes-5b8089186"
+    twitter: "https://x.com/hriquen"

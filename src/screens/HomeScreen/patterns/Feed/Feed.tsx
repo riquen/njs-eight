@@ -1,8 +1,12 @@
 import Box from "@src/components/Box/Box";
 import Button from "@src/components/Button/Button";
+import Icon from "@src/components/Icon/Icon";
 import Image from "@src/components/Image/Image";
+import Link from "@src/components/Link/Link";
 import Text from "@src/components/Text/Text";
+import { useTemplateConfig } from "@src/services/template/TemplateConfigContext";
 import { useTheme } from "@src/theme/ThemeProvider";
+import * as icons from "@src/components/Icon/svgs/_index";
 
 interface FeedProps {
   children: React.ReactNode;
@@ -30,6 +34,7 @@ export default function Feed({ children }: FeedProps) {
 
 Feed.Header = function FeedHeader() {
   const theme = useTheme()
+  const { personal } = useTemplateConfig()
 
   return (
     <Box
@@ -47,7 +52,7 @@ Feed.Header = function FeedHeader() {
           marginBottom: '16px',
         }}
       >
-        <Image src="https://www.github.com/riquen.png" alt="Imagem de perfil do Henrique Nunes" />
+        <Image src={personal.avatar} alt="Imagem de perfil do Henrique Nunes" />
         <Box
           styleSheet={{
             justifyContent: 'space-between',
@@ -64,9 +69,26 @@ Feed.Header = function FeedHeader() {
         </Box>
       </Box>
       <Text tag="h1" variant="heading4">
-        Henrique Nunes
+        {personal.name}
       </Text>
-    </Box>
+      <Box
+        styleSheet={{
+          flexDirection: 'row',
+          gap: '4px',
+        }}
+      >
+        {Object.keys(personal.socialNetworks).map((key: keyof typeof icons) => {
+          if (personal.socialNetworks[key]) {
+            return (
+              <Link key={key} href={personal.socialNetworks[key]} >
+                <Icon name={key} />
+              </Link>
+            )
+          }
+          return null
+        })}
+      </Box>
+    </Box >
   )
 }
 
