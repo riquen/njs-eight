@@ -10,9 +10,10 @@ interface ButtonProps extends ButtonBaseProps {
   colorVariant?: ThemeColorsVariants
   variant?: Variant
   size?: ButtonSize
+  href?: string
 }
 
-export default function Button({ children, fullWidth = false, colorVariant = 'primary', variant = 'contained', size = 'md', styleSheet }: ButtonProps) {
+export default function Button({ children, fullWidth = false, colorVariant = 'primary', variant = 'contained', size = 'md', styleSheet, ...props }: ButtonProps) {
   const theme = useTheme()
   return (
     <ButtonBase
@@ -25,6 +26,7 @@ export default function Button({ children, fullWidth = false, colorVariant = 'pr
         ...(fullWidth && { alignSelf: 'initial' }),
         ...styleSheet,
       }}
+      {...props}
     >
       {children}
     </ButtonBase>
