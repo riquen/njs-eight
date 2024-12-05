@@ -4,7 +4,7 @@ import { StyleSheet } from "@src/theme/StyleSheet";
 interface BoxProps {
   children?: React.ReactNode;
   styleSheet?: StyleSheet;
-  tag?: 'main' | 'div' | 'article' | 'section' | 'ul'
+  tag?: 'main' | 'div' | 'article' | 'section' | 'ul' | 'span'
 }
 
 export default function Box({ children, styleSheet, tag = 'div', ...props }: BoxProps) {

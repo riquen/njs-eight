@@ -6,8 +6,13 @@ import Menu from "./patterns/Menu/Menu";
 import Feed from "./patterns/Feed/Feed";
 import Footer from "./patterns/Footer/Footer";
 import { useTheme } from "@src/theme/ThemeProvider";
+import type { Post } from "@src/services/posts/PostsService";
 
-export default function HomeScreen() {
+interface HomeScreenProps {
+  posts: Post[];
+}
+
+export default function HomeScreen({ posts }: HomeScreenProps) {
   const theme = useTheme();
 
   return (
@@ -23,11 +28,8 @@ export default function HomeScreen() {
       <Menu />
       <Feed>
         <Feed.Header />
+        <Feed.Posts posts={posts} />
       </Feed>
-      {/* <Text tag="h2" variant="heading1">
-          Últimas atualizações
-        </Text>
-        <Feed.Posts /> */}
       <Footer />
     </Box>
   )
