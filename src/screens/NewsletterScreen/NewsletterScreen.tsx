@@ -55,7 +55,7 @@ export default function NewsletterScreen() {
             headers: {
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify(values.emailNewsletter)
+            body: JSON.stringify(values)
           })
             .then(async (res) => {
               const response = await res.json()

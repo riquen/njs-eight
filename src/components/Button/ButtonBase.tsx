@@ -1,8 +1,6 @@
 import { ThemeTypographyVariants } from "@src/theme/theme";
 import styled from "styled-components";
 import Text from "../Text/Text";
-import { useRef } from "react";
-import { useRipple } from "react-use-ripple";
 import { StyleSheet } from "@src/theme/StyleSheet";
 import { useRouter } from "next/navigation";
 
@@ -23,11 +21,6 @@ export default function ButtonBase({
   styleSheet,
   ...props
 }: ButtonBaseProps) {
-  const ref = useRef()
-  useRipple(ref, {
-    animationLength: 600,
-    rippleColor: 'rgba(255,255,255,0.3)'
-  })
   const router = useRouter()
   const isLink = !!href
   const Tag = isLink ? 'a' : 'button'
@@ -43,7 +36,6 @@ export default function ButtonBase({
 
   return (
     <StyledButton
-      ref={ref}
       tag={Tag}
       href={href}
       styleSheet={{
