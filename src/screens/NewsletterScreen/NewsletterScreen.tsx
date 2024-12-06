@@ -49,6 +49,21 @@ export default function NewsletterScreen() {
           }
 
           alert('E-mail cadastrado com sucesso')
+
+          fetch('/api/newsletter/optin', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(values.emailNewsletter)
+          })
+            .then(async (res) => {
+              const response = await res.json()
+              console.log("🚀 ~ .then ~ response:", response)
+            })
+            .catch(() => {
+
+            })
         }}
       >
         <Box
